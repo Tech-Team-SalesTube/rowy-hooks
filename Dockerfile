@@ -25,6 +25,9 @@ RUN whoami
 RUN ls -lha
 RUN npm install --production
 COPY --from=builder /home/node/app/build ./build
+RUN ls -lha
+RUN ls -lha ./build
+
 
 EXPOSE 8080
 CMD [ "node", "build/index.js" ]
