@@ -49,7 +49,7 @@ options:
 substitutions:
   _DEPLOY_REGION: europe-central2
   _DOCKERFILE_PATH: ./Dockerfile
-  _SERVICE_NAME: rowy-hooks-pubsub
+  _SERVICE_NAME: "rowy-hooks-${BRANCH_NAME}"
   _SERVICE_ACCOUNT: "rowy-hooks@${PROJECT_ID}.iam.gserviceaccount.com"
 tags:
   - "$_SERVICE_NAME"
